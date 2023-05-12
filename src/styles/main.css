@@ -19,7 +19,7 @@ body {
 
 .bg-dark {
   background-color: #12002b;
-  height: 80vh;
+  min-height: 80vh;
   padding-top: 2rem;
 }
 
@@ -260,7 +260,6 @@ body {
 .footer {
   display: flex;
   justify-content: center;
-  border-top: 2px solid #ccc;
   padding: 2rem 0 1.5rem;
 }
 
