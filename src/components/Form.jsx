@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -11,6 +11,7 @@ import {
 } from "../services/AuthService";
 
 const Form = () => {
+  const [showErrorMessage, updateShowErrorMessage] = useState(false);
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -42,6 +43,7 @@ const Form = () => {
       })
       .catch((err) => {
         console.log(err);
+        updateShowErrorMessage(true);
       });
   };
 
@@ -63,6 +65,8 @@ const Form = () => {
         <input type="checkbox" id="remember-me" />
         <label>Remember me</label>
       </div>
+
+      {showErrorMessage ? <div className="error-message">Your login informations are incorrect. Please try again.</div> : undefined}
 
       <input
         type="submit"

@@ -379,3 +379,10 @@ button {
     width: 200px;
   }
 }
+
+.error-message {
+  text-align: start;
+  padding-top: 20px;
+  color: red;
+  font-weight: 500;
+}
