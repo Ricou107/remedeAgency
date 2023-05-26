@@ -66,7 +66,7 @@ const Form = () => {
         <label>Remember me</label>
       </div>
 
-      {showErrorMessage ? <div className="error-message">Your login informations are incorrect. Please try again.</div> : undefined}
+      {showErrorMessage ? <div className="error-message">Your login information are incorrect. Please try again.</div> : undefined}
 
       <input
         type="submit"
